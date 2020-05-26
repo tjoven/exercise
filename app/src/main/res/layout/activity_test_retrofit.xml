@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.tjoven.retrofitRxjava.TestRetrofitActivity">
+
+    <TextView
+        android:layout_width="100dip"
+        android:layout_height="100dip"
+        android:text="click"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:onClick="request"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="100dip"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimary"/>
+</LinearLayout>

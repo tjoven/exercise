@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="title_activity_async_task_demo">AsyncTaskDemo</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="title_activity_broadcast_reciver_demo">BroadcastReciverDemo</string>
+    <string name="title_activity_content_provider_demo">ContentProviderDemo</string>
+    <string name="title_activity_okhttp">OkhttpActivity</string>
+    <string name="title_activity_recycler_view">RecyclerViewActivity</string>
+</resources>

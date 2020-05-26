@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.example.motionevent.View1
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:background="#ff00ff"
+        android:layout_gravity="center">
+        <com.example.motionevent.View2
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:background="#ff0000"
+            android:layout_gravity="center">
+            <com.example.motionevent.View3
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#0000ff"
+                android:layout_gravity="center"
+                android:text="HELLO"
+                android:textColor="@color/colorAccent"
+                android:textSize="30dp"/>
+            <com.example.motionevent.Button1
+                android:id="@+id/button"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="button"/>
+
+        </com.example.motionevent.View2>
+    </com.example.motionevent.View1>
+
+</FrameLayout>

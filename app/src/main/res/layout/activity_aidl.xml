@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+    <Button
+        android:id="@+id/bindService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bindService"/>
+    <Button
+        android:id="@+id/getBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="getBook"/>
+    <Button
+        android:id="@+id/addBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="addBook"/>
+    <Button
+        android:id="@+id/unbindServer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="unbindServer"/>
+    <Button
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="register"/>
+    <Button
+        android:id="@+id/unregister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="unregister"/>
+</LinearLayout>
