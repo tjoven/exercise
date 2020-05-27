@@ -1,13 +1,11 @@
 package com.example.tjoven.activity.bitmap;
 
 import android.app.Activity;
-import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.os.Environment;
-import android.support.annotation.Nullable;
 import android.util.LruCache;
 import android.widget.ImageView;
+
 
 /**
  * Created by tjoven on 2018/5/6.
@@ -15,7 +13,7 @@ import android.widget.ImageView;
 
 public class BitmapDemo extends Activity{
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inSampleSize = 2;//采样率：图片的缩放比例

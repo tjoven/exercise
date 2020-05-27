@@ -1,13 +1,13 @@
 package com.example.motionevent;
 
 import android.content.Context;
-import android.content.Intent;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
-import android.view.View;
 
-public class Button1 extends android.support.v7.widget.AppCompatButton {
+import androidx.appcompat.widget.AppCompatButton;
+
+public class Button1 extends AppCompatButton {
 
     private String TAG = "Button1";
 

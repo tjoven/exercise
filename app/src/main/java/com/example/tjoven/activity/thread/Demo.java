@@ -2,7 +2,8 @@ package com.example.tjoven.activity.thread;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.Nullable;
 
 /**
  * Created by tjoven on 2018/5/5.

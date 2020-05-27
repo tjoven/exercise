@@ -15,6 +15,6 @@ public interface ApiService {
 //    @GET("{url}")
 //    Call<Entry> getData(@Path("url") String url, @QueryMap Map<String,String> params);
     @GET("{url}")
-    Observable<Entry> getData(@Path("url") String url, @QueryMap Map<String,String> params);
+    Call<Entry> getData(@Path("url") String url, @QueryMap Map<String,String> params);
 
 }

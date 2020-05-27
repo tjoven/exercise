@@ -1,1 +1,1 @@
-include ':app', ':motionevent', ':thread'
+include ':app', ':motionevent', ':thread', ':network'

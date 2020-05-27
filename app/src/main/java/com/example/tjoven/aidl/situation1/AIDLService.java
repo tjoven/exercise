@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Binder;
 import android.os.IBinder;
 import android.os.RemoteException;
-import android.support.annotation.Nullable;
 import android.util.Log;
 
 import com.example.tjoven.aidl.Book;
@@ -37,7 +36,6 @@ public class AIDLService extends Service {
         Log.d(TAG, "pid  " + pid);
     }
 
-    @Nullable
     @Override
     public IBinder onBind(Intent intent) {
         return binder;
