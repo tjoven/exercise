@@ -67,9 +67,7 @@
         <activity
             android:name="com.example.tjoven.activity.ContentProviderDemo"
             android:label="@string/title_activity_content_provider_demo" />
-        <activity
-            android:name="com.example.tjoven.activity.http.OkhttpActivity"
-            android:label="@string/title_activity_okhttp" />
+
         <activity android:name="com.example.tjoven.service.DemoActivity" />
         <activity android:name="com.example.tjoven.messenger.MessengerActivity" />
         <activity android:name="com.example.tjoven.aidl.situation1.AIDLActivity" />

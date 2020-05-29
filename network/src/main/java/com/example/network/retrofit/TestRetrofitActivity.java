@@ -1,4 +1,4 @@
-package com.example.network;
+package com.example.network.retrofit;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -8,8 +8,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 
-import com.example.network.api.Entry;
-import com.google.gson.GsonBuilder;
+import com.example.network.R;
+import com.example.network.retrofit.api.Entry;
 
 import java.util.HashMap;
 
@@ -52,7 +52,7 @@ public class TestRetrofitActivity extends Activity {
     private void request(View view){
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(baseUrl)
-                .addConverterFactory(GsonConverterFactory.create(new GsonBuilder().create()))
+                .addConverterFactory(GsonConverterFactory.create())
                 .build();
         ApiService apiService = retrofit.create(ApiService.class);
         HashMap<String,String> params = new HashMap<>();

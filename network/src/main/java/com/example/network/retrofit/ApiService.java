@@ -1,6 +1,6 @@
-package com.example.network;
+package com.example.network.retrofit;
 
-import com.example.network.api.Entry;
+import com.example.network.retrofit.api.Entry;
 
 import java.util.Map;
 

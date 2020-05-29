@@ -1,4 +1,4 @@
-package com.example.network.api;
+package com.example.network.retrofit.api;
 
 import java.io.Serializable;
 import java.util.List;
