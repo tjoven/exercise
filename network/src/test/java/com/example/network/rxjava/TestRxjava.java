@@ -23,6 +23,7 @@ public class TestRxjava {
         Observable.create(new ObservableOnSubscribe<Integer>() {
             @Override
             public void subscribe(ObservableEmitter<Integer> emitter) throws Exception {
+                System.out.println("subscribe");
                 emitter.onNext(1);
                 emitter.onNext(2);
                 emitter.onNext(3);

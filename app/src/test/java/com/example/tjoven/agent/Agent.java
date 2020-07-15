@@ -19,7 +19,8 @@ public class Agent {
     public  void test() {
         Person person = new Student();
         InvocationHandler handler = new ProxyHandler(person);
-        Person proxy = (Person) Proxy.newProxyInstance(person.getClass().getClassLoader(),person.getClass().getInterfaces(),handler);
+        Person proxy = (Person) Proxy.newProxyInstance(person.getClass().getClassLoader()
+                ,person.getClass().getInterfaces(),handler);
         proxy.study();
 
         System.out.println("----------------------");

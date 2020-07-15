@@ -22,6 +22,9 @@ public class OkhttpActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_okhttp);
 
+        /**
+         * 异步
+         */
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -45,6 +48,9 @@ public class OkhttpActivity extends Activity {
             }
         });
 
+        /**
+         * 同步
+         */
         findViewById(R.id.button1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -57,6 +63,7 @@ public class OkhttpActivity extends Activity {
 
                 try {
                     Response response = call.execute();
+
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
