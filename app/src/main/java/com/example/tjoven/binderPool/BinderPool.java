@@ -62,8 +62,10 @@ public class BinderPool {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
             Log.d(TAG,"onServiceConnected" + "  Thread Id:" + Thread.currentThread().getId());
-            downLatch.countDown();
             pool = IBinderPool.Stub.asInterface(service);
+            downLatch.countDown();
+            Log.d(TAG,"pool " + pool.toString());
+
 
 
         }
@@ -75,6 +77,8 @@ public class BinderPool {
     };
 
     public IBinder queryBinder(int code){
+        Log.d(TAG,"queryBinder" + "  Thread Id:" + Thread.currentThread().getId());
+
         IBinder binder = null;
         try {
             binder = pool.queryBinder(code);

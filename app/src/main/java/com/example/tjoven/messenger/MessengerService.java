@@ -43,6 +43,7 @@ public class MessengerService extends Service {
             msg.what = MessengerService.FROMSERVER;
             Bundle bundle = new Bundle();
             bundle.putString("msg","server say im ok");
+            message.setData(bundle);
             try {
                 messenger.send(msg);
             } catch (RemoteException e) {

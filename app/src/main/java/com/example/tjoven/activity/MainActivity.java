@@ -9,7 +9,6 @@ import android.widget.Button;
 import com.example.tjoven.adapter.MainAdapter;
 import com.example.tjoven.myapplication.BaseActivity;
 import com.example.tjoven.myapplication.R;
-import com.example.tjoven.retrofitRxjava.TestRetrofitActivity;
 
 import java.util.ArrayList;
 
@@ -44,7 +43,7 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
-                intent.setClass(MainActivity.this, TestRetrofitActivity.class);
+//                intent.setClass(MainActivity.this, TestRetrofitActivity.class);
                 startActivity(intent);
             }
         });
