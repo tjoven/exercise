@@ -11,7 +11,7 @@ import retrofit2.Response;
 
 public class Retrofit {
     public static void main(String[] args) {
-        retrofit2.Retrofit retrofit = new retrofit2.Retrofit.Builder().baseUrl("https://www.baicu.com")
+        retrofit2.Retrofit retrofit = new retrofit2.Retrofit.Builder().baseUrl("https://www.baidu.com")
                 .build();
 
         ApiService apiService = retrofit.create(ApiService.class);

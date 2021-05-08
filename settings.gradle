@@ -1,1 +1,1 @@
-include ':app', ':motionevent', ':thread', ':network',':leak',':imageloader',':fragment'
+include ':app', ':motionevent', ':thread', ':network',':leak',':imageloader',':fragment', ':mylibrary', ':butterknife', ':kotlin', ':jetpack'

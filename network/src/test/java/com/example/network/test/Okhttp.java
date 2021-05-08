@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import okhttp3.Call;
 import okhttp3.Callback;
+import okhttp3.FormBody;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -13,7 +14,9 @@ import okio.BufferedSink;
 
 public class Okhttp {
     public static void main(String[] args) {
-        OkHttpClient client = new OkHttpClient.Builder().build();
+        OkHttpClient client = new OkHttpClient.Builder()
+                .eventListenerFactory(HttpEventListener.FACTORY)
+                .build();
 
 
         okhttp(client);
@@ -22,7 +25,10 @@ public class Okhttp {
     }
 
     private static void okhttp(OkHttpClient client) {
-        Request request = new Request.Builder().url("https://www.baicu.com").build();
+
+        Request request = new Request.Builder().url("https://www.kuaidi100.com")
+                .build();
+
         Call call = client.newCall(request);
         call.enqueue(new Callback() {
             @Override
@@ -34,6 +40,7 @@ public class Okhttp {
             public void onResponse(Call call, Response response) throws IOException {
                 System.out.println("tag  " +"222");
                 System.out.println("tag  " + Thread.currentThread().getName());
+                System.out.println("tag  " +response.body().string());
             }
         });
     }

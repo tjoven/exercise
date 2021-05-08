@@ -24,8 +24,11 @@ public class TestRxjava {
             @Override
             public void subscribe(ObservableEmitter<Integer> emitter) throws Exception {
                 System.out.println("subscribe");
+                System.out.println("m1");
                 emitter.onNext(1);
+                System.out.println("m2");
                 emitter.onNext(2);
+                System.out.println("m3");
                 emitter.onNext(3);
                 emitter.onComplete();
             }
@@ -38,12 +41,17 @@ public class TestRxjava {
 
             @Override
             public void onNext(Integer integer) {
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 System.out.println("onNext "+integer);
             }
 
             @Override
             public void onError(Throwable e) {
-                System.out.println("onError");
+                System.out.println("onError: "+e.getMessage());
             }
 
             @Override

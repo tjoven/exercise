@@ -1,5 +1,6 @@
 package com.example.imageloader.glide;
 
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -8,8 +9,13 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
+import com.bumptech.glide.request.target.SimpleTarget;
+import com.bumptech.glide.request.target.Target;
+import com.bumptech.glide.request.transition.Transition;
 import com.example.imageloader.R;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -67,7 +73,16 @@ public class MainActivity extends AppCompatActivity {
                 .asBitmap()
                 .load(pathurl)
                 .apply(options)
-                .into(imageView);
+                .into(new  SimpleTarget<Bitmap>(){
+
+                    @Override
+                    public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
+
+                    }
+                }
+
+        );
+//                .into(imageView);
 
     }
 

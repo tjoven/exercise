@@ -23,17 +23,26 @@ public class TestRxjava2 {
         System.out.println( "TestRxjava2 所在线程为 :" + Thread.currentThread().getName());
         Observable.create(new ObservableOnSubscribe<Integer>() {
             @Override
-            public void subscribe(ObservableEmitter<Integer> emitter) throws Exception {
+            public void subscribe(ObservableEmitter<Integer> emitter) {
                 System.out.println( "subscribe 所在线程为 :" + Thread.currentThread().getName());
+                System.out.println("m1");
                 emitter.onNext(1);
+                System.out.println("m2");
                 emitter.onNext(2);
+                System.out.println("m3");
                 emitter.onNext(3);
-                emitter.onComplete();
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                System.out.println("m4");
+                emitter.onNext(4);
+//                emitter.onComplete();
             }
         })
                 .subscribeOn(Schedulers.io())//被观察者 线程
-//                .observeOn(AndroidSchedulers.mainThread())
-                .observeOn(Schedulers.computation())
+                .observeOn(Schedulers.io())
                 .subscribe(new Observer<Integer>() {
             @Override
             public void onSubscribe(Disposable d) {
@@ -44,8 +53,13 @@ public class TestRxjava2 {
 
             @Override
             public void onNext(Integer integer) {
-                System.out.println( "onNext 所在线程为 :" + Thread.currentThread().getName());
                 System.out.println("onNext "+integer);
+                try {
+//                    Thread.sleep(300);
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
+                    e.printStackTrace();
+                }
             }
 
             @Override

@@ -1,13 +1,14 @@
 package com.example.motionevent;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
-import android.widget.Toast;
 
-public class View3 extends android.support.v7.widget.AppCompatTextView {
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatTextView;
+
+public class View3 extends AppCompatTextView {
     private String TAG = "View3";
 
     public View3(Context context) {

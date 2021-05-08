@@ -1,11 +1,14 @@
 package com.example.fragment;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.res.Configuration;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.util.Log;
 import android.view.View;
 
@@ -22,10 +25,28 @@ public class MainActivity extends Activity {
 
         manager = getFragmentManager();
 
-        init();
-        onBind();
+//        init();
+//        onBind();
 
 
+    }
+
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        Log.d(TAT,"onConfigurationChanged");
+    }
+
+    @Override
+    public void onRestoreInstanceState(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
+        super.onRestoreInstanceState(savedInstanceState, persistentState);
+        Log.d(TAT,"onRestoreInstanceState");
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState, @NonNull PersistableBundle outPersistentState) {
+        super.onSaveInstanceState(outState, outPersistentState);
+        Log.d(TAT,"onSaveInstanceState");
     }
 
     private void onBind() {
